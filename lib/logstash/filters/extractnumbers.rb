@@ -9,7 +9,7 @@ require 'logstash/filters/base'
 # This is useful when you have lines that don't match a grok pattern
 # or use json but you still need to extract numbers.
 #
-# Each numbers is returned in a @fields.intX or @fields.floatX field
+# Each numbers is returned in a `@fields.intX` or `@fields.floatX` field
 # where X indicates the position in the string.
 #
 # The fields produced by this filter are extra useful used in combination
