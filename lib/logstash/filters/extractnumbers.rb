@@ -16,7 +16,6 @@ require 'logstash/filters/base'
 # with kibana number plotting features.
 class LogStash::Filters::ExtractNumbers < LogStash::Filters::Base
   config_name 'extractnumbers'
-  milestone 1
 
   # The source field for the data. By default is message.
   config :source, :validate => :string, :default => 'message'
