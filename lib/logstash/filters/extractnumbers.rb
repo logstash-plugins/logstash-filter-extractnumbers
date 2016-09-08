@@ -29,7 +29,7 @@ class LogStash::Filters::ExtractNumbers < LogStash::Filters::Base
     integers = nil
     floats = nil
 
-    msg = event[@source]
+    msg = event.get(@source)
 
     if not msg
       return
@@ -62,14 +62,14 @@ class LogStash::Filters::ExtractNumbers < LogStash::Filters::Base
       index = 0
       for i in integers
         index += 1
-        event["int" + index.to_s] = i
+        event.set("int" + index.to_s, i)
       end
     end
     if floats
       index = 0
       for f in floats
         index += 1
-        event["float" + index.to_s] = f
+        event.set("float" + index.to_s, f)
       end
     end
   end

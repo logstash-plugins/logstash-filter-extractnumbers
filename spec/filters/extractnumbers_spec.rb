@@ -2,7 +2,6 @@ require "logstash/devutils/rspec/spec_helper"
 require "logstash/filters/extractnumbers"
 
 describe LogStash::Filters::ExtractNumbers do
-  
 
   describe "Extract numbers test" do
     # The logstash config goes here.
@@ -15,9 +14,9 @@ describe LogStash::Filters::ExtractNumbers do
     CONFIG
 
     sample("message" => "bla 1234 foo 5678 geek 10.43") do
-      insist { subject["int1"] } == 1234
-      insist { subject["int2"] } == 5678
-      insist { subject["float1"] } == 10.43
+      insist { subject.get("int1") } == 1234
+      insist { subject.get("int2") } == 5678
+      insist { subject.get("float1") } == 10.43
     end
   end
 
