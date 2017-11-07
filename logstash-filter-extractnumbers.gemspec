@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-filter-extractnumbers'
-  s.version         = '3.0.2'
+  s.version         = '3.0.3'
   s.platform        = 'java'
   s.licenses        = ['Apache-2.0']
-  s.summary         = "This filter automatically extracts all numbers found inside a string"
+  s.summary         = "Extracts numbers from a string"
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
   s.authors         = ["Elastic"]
   s.email           = 'info@elastic.co'
